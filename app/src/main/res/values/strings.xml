@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">DogVacayProject</string>
+    <string name="drawer_open">open</string>
+    <string name="drawer_close">close</string>
+    <string name="browse">Browse</string>
+    <string name="user_name">User Name</string>
 </resources>
