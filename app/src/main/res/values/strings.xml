@@ -11,4 +11,5 @@
     <string name="prev_20">PREV 20</string>
     <string name="redo_search">Redo Search</string>
     <string name="next_20">NEXT 20</string>
+    <string name="filter_host">FILTER</string>
 </resources>
