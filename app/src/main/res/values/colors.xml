@@ -4,4 +4,15 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="navigation_background">#fc478de9</color>
+    <color name="browse_background">#ffedeae5</color>
+    <color name="vacays_tab_text_color">#ff2a4960</color>
+    <color name="vacays_tab_background">#fffcfbf8</color>
+    <color name="vacays_tab_indicator">#f4de34</color>
+    <color name="vacays_tab_underline_color">#aad2fa</color>
+    <color name="vacays_tab_divider_color">#cccbce</color>
+    <color name="brand_color">#96ede2</color>
+    <color name="white">#fdfdfd</color>
+    <color name="item_browse_title_text_color">#ff44a7b1</color>
+    <color name="item_browse_address_text_color">#ff747474</color>
+    <color name="browse_map_pagination_color">#ffec6350</color>
 </resources>

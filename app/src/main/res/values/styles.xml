@@ -18,5 +18,20 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+    <style name="browse_textview">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@drawable/underline</item>
+        <item name="android:padding">5.0dip</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">@dimen/browse_textview_height</item>
+        <item name="android:layout_marginLeft">@dimen/browse_textview_left_margin</item>
+        <item name="android:layout_marginTop">@dimen/browse_textview_top_margin</item>
+        <item name="android:layout_marginRight">@dimen/browse_textview_left_margin</item>
+        <item name="android:drawablePadding">@dimen/browse_textview_drawable_padding</item>
+    </style>
 
+    <dimen name="browse_textview_height">35dp</dimen>
+    <dimen name="browse_textview_left_margin">15dp</dimen>
+    <dimen name="browse_textview_top_margin">4dp</dimen>
+    <dimen name="browse_textview_drawable_padding">10dp</dimen>
 </resources>

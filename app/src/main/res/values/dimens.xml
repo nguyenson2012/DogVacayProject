@@ -10,4 +10,18 @@
     <dimen name="nav_drawer_item_margin_top_img_and_text">15dp</dimen>
     <dimen name="img_user_avatar_size">80dp</dimen>
     <dimen name="padding_nav_drawer">16dp</dimen>
+    <dimen name="host_details_text_size_big">18sp</dimen>
+    <dimen name="vacays_tab_underline_height">1dp</dimen>
+    <dimen name="browse_header_bottom_padding">3dp</dimen>
+    <dimen name="browse_header_offset">90dp</dimen>
+    <dimen name="browse_map_panel_corner_radius">3dp</dimen>
+    <dimen name="browse_map_description_height">85dp</dimen>
+    <dimen name="browse_map_panel_margin">8dp</dimen>
+    <dimen name="browse_map_view_padding">10dp</dimen>
+    <dimen name="title_map_tect_size">18sp</dimen>
+    <dimen name="title_map_margin_top">6dp</dimen>
+    <dimen name="address_text_size">16sp</dimen>
+    <dimen name="address_margin_top">3dp</dimen>
+    <dimen name="browse_map_bottom_margin">5dp</dimen>
+    <dimen name="browse_height">44dp</dimen>
 </resources>

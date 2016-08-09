@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:background="@color/browse_background"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:pp="http://schemas.android.com/tools">
+    <com.astuetz.PagerSlidingTabStrip
+        android:textSize="@dimen/host_details_text_size_big"
+        android:textColor="@color/vacays_tab_text_color"
+        android:id="@+id/pager_tab_strip"
+        android:background="@color/vacays_tab_background"
+        android:layout_width="fill_parent"
+        android:layout_height="?actionBarSize"
+        app:pstsIndicatorColor="@color/vacays_tab_indicator"
+        app:pstsUnderlineColor="@color/vacays_tab_underline_color"
+        app:pstsDividerColor="@color/vacays_tab_divider_color"
+        app:pstsUnderlineHeight="@dimen/vacays_tab_underline_height"
+        app:pstsTabPaddingLeftRight="14.0dip"
+        pp:pstsTabBackground="?selectableItemBackground"
+        app:pstsShouldExpand="true" app:pstsTextAllCaps="false"
+        xmlns:app="http://schemas.android.com/apk/res-auto" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.example.asus.dogvacayproject.view.NonSwipeViewPager
+            android:id="@+id/pager_sitter_and_map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></com.example.asus.dogvacayproject.view.NonSwipeViewPager>
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/header"
+            android:background="@color/browse_background"
+            android:paddingBottom="@dimen/browse_header_bottom_padding"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:ellipsize="end"
+                android:id="@+id/tv_place_text"
+                android:background="?selectableItemBackground"
+                android:clickable="true"
+                android:singleLine="true"
+                android:drawableLeft="@drawable/location_small_input"
+                android:drawableStart="@drawable/location_small_input"
+                style="@style/browse_textview" />
+            <View
+                android:background="@color/brand_color"
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px"
+                android:layout_marginLeft="15.0dip"
+                android:layout_marginRight="15.0dip" />
+            <TextView
+                android:id="@+id/tv_dates_text"
+                android:background="?selectableItemBackground"
+                android:clickable="true"
+                android:drawableLeft="@drawable/calendar_small_input"
+                android:drawableStart="@drawable/calendar_small_input"
+                style="@style/browse_textview" />
+            <View
+                android:background="@color/brand_color"
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px"
+                android:layout_marginLeft="15.0dip"
+                android:layout_marginRight="15.0dip" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

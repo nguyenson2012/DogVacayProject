@@ -1,6 +1,7 @@
 package com.example.asus.dogvacayproject.activities;
 
-import android.app.FragmentManager;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,6 +10,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.example.asus.dogvacayproject.R;
+import com.example.asus.dogvacayproject.fragment.FragmentBrowse;
 import com.example.asus.dogvacayproject.fragment.LoggedOutNavigationDrawer;
 import com.example.asus.dogvacayproject.utils.Const;
 
@@ -33,12 +35,16 @@ public class MainActivity extends AppCompatActivity implements LoggedOutNavigati
                 getSupportFragmentManager().findFragmentById(R.id.fragment_navigation_drawer);
         drawerFragment.setUp(R.id.fragment_navigation_drawer, (DrawerLayout) findViewById(R.id.drawer_layout), mToolbar);
         drawerFragment.setDrawerListener(this);
-        mFragmentManager=getFragmentManager();
-        addMainFragment();
+        mFragmentManager=getSupportFragmentManager();
+        addFragmentBrowse();
     }
 
-    private void addMainFragment() {
-
+    private void addFragmentBrowse() {
+        FragmentBrowse fragmentBrowse=new FragmentBrowse();
+        FragmentTransaction fragmentTransaction = mFragmentManager
+                .beginTransaction();
+        fragmentTransaction.replace(R.id.fragment_container, fragmentBrowse);
+        fragmentTransaction.commit();
     }
 
     @Override

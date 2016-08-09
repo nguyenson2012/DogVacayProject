@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:paddingTop="@dimen/browse_header_offset"
+    android:layout_width="fill_parent" android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/map_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+    <View
+        android:background="@drawable/shadow_top_to_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="10.0dip" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/description"
+        android:background="@drawable/browse_map_panel_background"
+        android:visibility="gone" android:layout_width="fill_parent"
+        android:layout_height="@dimen/browse_map_description_height"
+        android:layout_margin="@dimen/browse_map_panel_margin"
+        android:layout_alignParentTop="true">
+        <ImageView
+            android:id="@+id/photo"
+            android:layout_width="@dimen/browse_map_description_height"
+            android:layout_height="@dimen/browse_map_description_height"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/default_content_description" />
+        <LinearLayout android:orientation="vertical"
+            android:paddingLeft="@dimen/browse_map_view_padding"
+            android:paddingRight="@dimen/browse_map_view_padding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/title_map_tect_size" android:textStyle="bold"
+                android:textColor="@color/item_browse_title_text_color"
+                android:ellipsize="end"
+                android:id="@+id/title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/title_map_margin_top" android:maxLines="2" />
+            <TextView android:textSize="@dimen/address_text_size"
+                android:textColor="@color/item_browse_address_text_color"
+                android:id="@+id/address"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/address_margin_top" />
+        </LinearLayout>
+    </LinearLayout>
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/browse_map_coordinator"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="@dimen/browse_map_bottom_margin">
+        <FrameLayout
+            android:layout_gravity="bottom"
+            android:background="@drawable/browse_map_panel_background"
+            android:layout_width="fill_parent" android:layout_height="@dimen/browse_height"
+            android:layout_marginLeft="@dimen/browse_map_panel_margin"
+            android:layout_marginRight="@dimen/browse_map_panel_margin">
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:id="@+id/current_location_button"
+                android:padding="@dimen/browse_map_view_padding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/single_map_currentloc"
+                android:contentDescription="@string/default_content_description" />
+            <LinearLayout
+                android:layout_gravity="right"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent">
+                <TextView
+                    android:textColor="@color/browse_map_pagination_color"
+                    android:gravity="center" android:id="@+id/prev_button"
+                    android:background="?selectableItemBackground"
+                    android:padding="@dimen/browse_map_view_padding"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:text="@string/prev_20" android:textAllCaps="true" />
+                <ImageView
+                    android:gravity="center"
+                    android:id="@+id/redo_button"
+                    android:background="?selectableItemBackground"
+                    android:padding="@dimen/browse_map_view_padding"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:src="@drawable/ic_refresh"
+                    android:contentDescription="@string/redo_search" />
+                <TextView
+                    android:textColor="@color/browse_map_pagination_color"
+                    android:gravity="center"
+                    android:id="@+id/next_button"
+                    android:background="?selectableItemBackground"
+                    android:padding="@dimen/browse_map_view_padding"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:text="@string/next_20"
+                    android:textAllCaps="true" />
+            </LinearLayout>
+        </FrameLayout>
+    </android.support.design.widget.CoordinatorLayout>
+</RelativeLayout>

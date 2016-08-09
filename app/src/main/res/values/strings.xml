@@ -4,4 +4,11 @@
     <string name="drawer_close">close</string>
     <string name="browse">Browse</string>
     <string name="user_name">User Name</string>
+    <string name="default_choose_place">All sitters near</string>
+    <string name="default_choose_date">Choose dates</string>
+    <string name="google_map_key">AIzaSyAirUwlax9iKUbeVtsl7rRC7Ek0l9LE8qI</string>
+    <string name="default_content_description">Image</string>
+    <string name="prev_20">PREV 20</string>
+    <string name="redo_search">Redo Search</string>
+    <string name="next_20">NEXT 20</string>
 </resources>
