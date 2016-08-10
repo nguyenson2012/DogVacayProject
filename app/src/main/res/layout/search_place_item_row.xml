@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal"
+        android:id="@+id/search_location_container"
+        android:background="?selectableItemBackground"
+        android:paddingLeft="@dimen/search_plae_item_padding_left"
+        android:paddingTop="@dimen/search_plae_item_padding_top"
+        android:paddingRight="@dimen/search_plae_item_padding_right"
+        android:paddingBottom="@dimen/search_plae_item_padding_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/search_location_marker"
+            android:layout_width="@dimen/search_marker_size"
+            android:layout_height="@dimen/search_marker_size"
+            android:src="@drawable/search_location_marker"
+            android:scaleType="fitXY" />
+        <TextView
+            android:textSize="16.0sp"
+            android:textColor="@color/current_location_color"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/search_location_text"
+            android:padding="15dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <include layout="@layout/cardview_divider_layout" />
+</LinearLayout>

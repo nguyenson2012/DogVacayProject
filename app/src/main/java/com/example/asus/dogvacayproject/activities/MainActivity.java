@@ -20,7 +20,10 @@ public class MainActivity extends AppCompatActivity implements LoggedOutNavigati
     private Toolbar mToolbar;
     private Button buttonFilter;
     private LoggedOutNavigationDrawer drawerFragment;
+    FragmentBrowse fragmentBrowse;
     private int currentStateLoggedIn= Const.LOGGED_IN_TYPE;
+    public static final int REQUEST_CODE_MAIN_CHOOSE_PLACE=110;
+    public static final int RESULT_CODE_MAIN_CHOOSE_PLACE=111;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,7 +55,7 @@ public class MainActivity extends AppCompatActivity implements LoggedOutNavigati
     }
 
     private void addFragmentBrowse() {
-        FragmentBrowse fragmentBrowse=new FragmentBrowse();
+        fragmentBrowse=new FragmentBrowse();
         FragmentTransaction fragmentTransaction = mFragmentManager
                 .beginTransaction();
         fragmentTransaction.replace(R.id.fragment_container, fragmentBrowse);

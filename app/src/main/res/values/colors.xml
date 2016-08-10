@@ -15,4 +15,6 @@
     <color name="item_browse_title_text_color">#ff44a7b1</color>
     <color name="item_browse_address_text_color">#ff747474</color>
     <color name="browse_map_pagination_color">#ffec6350</color>
+    <color name="host_detail_divider_color">#ffc8c7cc</color>
+    <color name="current_location_color">#ff4a90e2</color>
 </resources>

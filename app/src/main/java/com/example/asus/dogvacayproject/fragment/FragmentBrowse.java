@@ -1,5 +1,6 @@
 package com.example.asus.dogvacayproject.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -12,6 +13,9 @@ import android.widget.TextView;
 
 import com.astuetz.PagerSlidingTabStrip;
 import com.example.asus.dogvacayproject.R;
+import com.example.asus.dogvacayproject.activities.ChoosePlaceActivity;
+import com.example.asus.dogvacayproject.activities.MainActivity;
+import com.example.asus.dogvacayproject.utils.Const;
 import com.example.asus.dogvacayproject.view.NonSwipeViewPager;
 
 import java.util.ArrayList;
@@ -20,11 +24,13 @@ import java.util.List;
 /**
  * Created by Asus on 8/8/2016.
  */
-public class FragmentBrowse extends Fragment {
+public class FragmentBrowse extends Fragment implements View.OnClickListener{
     PagerSlidingTabStrip pagerSlidingTabStrip;
     NonSwipeViewPager viewPager;
     ViewPagerAdapter adapter;
     TextView tvPlace,tvDate;
+    String currentLocation,currentService;
+    int startDateChoose,endDateChoose;
     public FragmentBrowse(){
 
     }
@@ -35,7 +41,13 @@ public class FragmentBrowse extends Fragment {
         View layoutBrowse=inflater.inflate(R.layout.fragment_browse,container,false);
         setupView(layoutBrowse);
         setupViewPager(viewPager);
+        registerEvent();
         return layoutBrowse;
+    }
+
+    private void registerEvent() {
+        tvDate.setOnClickListener(this);
+        tvPlace.setOnClickListener(this);
     }
 
     private void setupViewPager(NonSwipeViewPager viewPager) {
@@ -54,6 +66,30 @@ public class FragmentBrowse extends Fragment {
         tvPlace.setText(getResources().getString(R.string.default_choose_place));
         tvDate.setText(getResources().getString(R.string.default_choose_date));
     }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.tv_place_text:
+                Intent intent=new Intent(getActivity(), ChoosePlaceActivity.class);
+                intent.putExtra(Const.SEND_PLACE_KEY,currentLocation);
+                startActivityForResult(intent, MainActivity.REQUEST_CODE_MAIN_CHOOSE_PLACE);
+                break;
+        }
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode==MainActivity.REQUEST_CODE_MAIN_CHOOSE_PLACE){
+            if(resultCode==MainActivity.RESULT_CODE_MAIN_CHOOSE_PLACE){
+                currentLocation=data.getStringExtra(Const.SEND_PLACE_KEY);
+                currentService=data.getStringExtra(Const.SEND_PLACE_SERVICE_KEY);
+                tvPlace.setText(currentService+" near "+currentLocation);
+            }
+        }
+    }
+
     class ViewPagerAdapter extends FragmentPagerAdapter {
         private final List<Fragment> mFragmentList = new ArrayList<>();
         private final List<String> mFragmentTitleList = new ArrayList<>();

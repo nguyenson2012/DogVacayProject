@@ -24,4 +24,9 @@
     <dimen name="address_margin_top">3dp</dimen>
     <dimen name="browse_map_bottom_margin">5dp</dimen>
     <dimen name="browse_height">44dp</dimen>
+    <dimen name="search_plae_item_padding_left">10dp</dimen>
+    <dimen name="search_plae_item_padding_top">5dp</dimen>
+    <dimen name="search_plae_item_padding_right">10dp</dimen>
+    <dimen name="search_plae_item_padding_bottom">5dp</dimen>
+    <dimen name="search_marker_size">22dp</dimen>
 </resources>

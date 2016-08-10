@@ -12,4 +12,13 @@
     <string name="redo_search">Redo Search</string>
     <string name="next_20">NEXT 20</string>
     <string name="filter_host">FILTER</string>
+    <string name="looking_for">I\'m looking for ...</string>
+    <string name="all_sitter">All sitters</string>
+    <string name="any_service">Any service</string>
+    <string name="boarding">Boarding</string>
+    <string name="boarding_details">Overnight at sitter\'s home</string>
+    <string name="sitting">Sitting</string>
+    <string name="sitting_detail">Overnight in your home</string>
+    <string name="daycare">Daycare</string>
+    <string name="daycare_detail">Sitter\'s home,no overnight</string>
 </resources>

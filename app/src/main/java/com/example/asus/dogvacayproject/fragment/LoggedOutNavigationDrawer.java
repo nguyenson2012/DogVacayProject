@@ -40,7 +40,7 @@ public class LoggedOutNavigationDrawer extends Fragment {
     private DrawerLayout mDrawerLayout;
     private View containerView;
     NavigationDrawerAdapter adapter;
-    int currentStateLogIn=1;
+    int currentStateLogIn=Const.LOGGED_IN_TYPE;
     private FragmentDrawerListener drawerListener;
 
     public LoggedOutNavigationDrawer(){
